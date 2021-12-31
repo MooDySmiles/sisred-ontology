@@ -6,7 +6,11 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred">
+        <rdfs:comment xml:lang="en">An Ontology about the Maggioli internal product Sistema Redazionale</rdfs:comment>
+        <rdfs:label xml:lang="en">SisRed Ontology</rdfs:label>
+        <owl:versionInfo xml:lang="en">0.1 by Andrea Pruccoli</owl:versionInfo>
+    </owl:Ontology>
 </rdf:RDF>
 
 
