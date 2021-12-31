@@ -11,6 +11,102 @@
         <rdfs:label xml:lang="en">SisRed Ontology</rdfs:label>
         <owl:versionInfo xml:lang="en">0.1 by Andrea Pruccoli</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Dottrina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Dottrina">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Dottrina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
