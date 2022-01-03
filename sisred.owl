@@ -25,6 +25,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Author"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Book"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Document"/>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
@@ -39,10 +57,55 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Editor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Editor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#User"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SysAdmin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#File -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#File"/>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#File"/>
     </owl:Class>
     
 
@@ -55,11 +118,25 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#File"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#DocumentType"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Product"/>
     
 
 
@@ -87,6 +164,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SysAdmin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SysAdmin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#ThematicArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#ThematicArea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#User"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -105,6 +210,16 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
