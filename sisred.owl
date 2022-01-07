@@ -96,6 +96,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasDocumento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasDocumento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasEstensore -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasEstensore">
@@ -166,6 +175,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasMassima -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasMassima">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isMassimaOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTipoDocumento"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#TipoDocumento_Giurisprudenza"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasOrgano -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasOrgano">
@@ -216,6 +245,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasProdotto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasProdotto">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasProvvedimento -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasProvvedimento">
@@ -260,6 +305,15 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Relatore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRimando -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRimando">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
     </owl:ObjectProperty>
     
 
@@ -364,6 +418,25 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Tta"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isMassimaOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isMassimaOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTipoDocumento"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#TipoDocumento_Giurisprudenza"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1316,6 +1389,12 @@
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima"/>
     
 
 
