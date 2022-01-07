@@ -64,6 +64,35 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasAutore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasAutore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Autori"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormato">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormatoCartaceo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormatoCartaceo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTipoOrgano -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTipoOrgano">
@@ -114,6 +143,25 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#anno -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#anno">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1900</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#autore -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#autore">
@@ -133,11 +181,54 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#collana -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#collana">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>data property o object property?</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#descrizione -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#descrizione">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#editore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#editore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>data property o object property?</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#edizione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#edizione">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>data property o object property?</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -190,19 +281,52 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#mese -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#mese">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">11</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#nome -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#nome">
-        <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>non posso metterlo equivalente a foaf:name, perché?</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#pagina_sito -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#pagina_sito">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -212,6 +336,16 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#previgenti">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#short_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#short_description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -234,6 +368,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#sottotitolo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#sottotitolo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/familyName -->
 
     <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/familyName"/>
@@ -249,12 +393,6 @@
     <!-- http://xmlns.com/foaf/0.1/lastName -->
 
     <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/lastName"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/name -->
-
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name"/>
     
 
 
@@ -275,10 +413,10 @@
     
 
 
-    <!-- http://purl.org/ontology/bibo/Document -->
+    <!-- http://purl.org/ontology/bibo/Book -->
 
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document">
-        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Book">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
     </rdf:Description>
     
 
@@ -408,6 +546,18 @@
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Fonti">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
     
 
 
@@ -637,6 +787,36 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/NET/c4dm/event.owl#Event"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/bibo/DocumentStatus"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Event"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/bibo/ThesisDegree"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#AreaTematica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Authority"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#File"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#TipoDocumento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#TipoOrgano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#TipoSede"/>
+            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+            <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/LabelProperty"/>
+            <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+            <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Project"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
