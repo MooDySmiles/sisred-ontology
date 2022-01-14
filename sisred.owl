@@ -1127,12 +1127,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Authority -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Authority"/>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Autori -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Autori">
@@ -1615,22 +1609,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Polizia">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#AreaTematica"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#ROLE_ADMIN -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#ROLE_ADMIN">
-        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Authority"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#ROLE_USER -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#ROLE_USER">
-        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Authority"/>
     </owl:NamedIndividual>
     
 
