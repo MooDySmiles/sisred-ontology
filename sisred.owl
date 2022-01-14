@@ -63,13 +63,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasAuthority">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasAuthority"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Authority"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Authority"/>
     </owl:ObjectProperty>
     
@@ -88,13 +81,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasCittà">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasCittà"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città"/>
     </owl:ObjectProperty>
     
@@ -113,13 +99,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasEstensore">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasEstensore"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Estensore"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Estensore"/>
     </owl:ObjectProperty>
     
@@ -136,13 +115,6 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFonte"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Fonti"/>
-            </owl:Restriction>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Fonti"/>
     </owl:ObjectProperty>
@@ -164,13 +136,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormatoCartaceo">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormatoCartaceo"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
     </owl:ObjectProperty>
     
@@ -198,13 +163,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasOrgano"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Organi"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Organi"/>
     </owl:ObjectProperty>
     
@@ -214,13 +172,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasPresidente">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasPresidente"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Presidente"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Presidente"/>
     </owl:ObjectProperty>
     
@@ -246,13 +197,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasProvvedimento">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasProvvedimento"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento"/>
     </owl:ObjectProperty>
     
@@ -262,13 +206,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRelatore">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRelatore"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Relatore"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Relatore"/>
     </owl:ObjectProperty>
     
@@ -277,6 +214,7 @@
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRimando -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRimando">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isRimandoOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
     </owl:ObjectProperty>
@@ -295,13 +233,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasSede"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Sedi"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Sedi"/>
     </owl:ObjectProperty>
     
@@ -311,13 +242,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTesto">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTesto"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo"/>
     </owl:ObjectProperty>
     
@@ -327,13 +251,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTipoProfor">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTipoProfor"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Tipo-Profor"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Tipo-Profor"/>
     </owl:ObjectProperty>
     
@@ -350,13 +267,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTta"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Tta"/>
-            </owl:Restriction>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Tta"/>
     </owl:ObjectProperty>
     
@@ -367,13 +277,15 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isMassimaOf">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isMassimaOf"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
-            </owl:Restriction>
-        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isRimandoOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isRimandoOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
     </owl:ObjectProperty>
     
 
@@ -383,13 +295,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isTestoOf">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isTestoOf"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
-            </owl:Restriction>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1189,14 +1094,21 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Sedi"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Ente"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTesto"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1294,6 +1206,48 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasCittà"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasEstensore"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Estensore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasOrgano"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Organi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasPresidente"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Presidente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRelatore"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Relatore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasSede"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Sedi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1316,7 +1270,15 @@
 
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormatoCartaceo"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1330,7 +1292,15 @@
 
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isMassimaOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1338,6 +1308,20 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasProvvedimento"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTta"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Tta"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1378,6 +1362,34 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFonte"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Fonti"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasOrgano"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Organi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasSede"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Sedi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTta"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Tta"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1400,6 +1412,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTipoProfor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Tipo-Profor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1408,6 +1427,27 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFonte"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Fonti"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasOrgano"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Organi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasSede"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Sedi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1416,6 +1456,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFonte"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Fonti"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1424,6 +1471,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Regione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Regione">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Entità_Sedi"/>
     </owl:Class>
     
 
@@ -1438,7 +1493,15 @@
 
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isTestoOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1446,6 +1509,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasAuthority"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Authority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1454,6 +1524,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente_Amministratore">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasAuthority"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#ROLE_ADMIN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente_Editor"/>
     </owl:Class>
     
@@ -1463,6 +1539,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente_Editor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasAuthority"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#ROLE_USER"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1582,6 +1664,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Ente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Regione"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
