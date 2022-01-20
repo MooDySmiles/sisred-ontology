@@ -1340,6 +1340,7 @@
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormatoCartaceo"/>
