@@ -1231,6 +1231,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Editor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#creatoDa"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Amministratore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1653,10 +1660,140 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Cartaceo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Cartaceo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Digitale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Digitale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Elezioni_e_referendum -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Elezioni_e_referendum">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#AreaTematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#JPEG"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#MSWORD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Mario_Rossi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Mario_Rossi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Editor"/>
+        <creatoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PDF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Paolo_Bianchi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Paolo_Bianchi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Editor"/>
+        <creatoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed"/>
     </owl:NamedIndividual>
     
 
@@ -1677,10 +1814,51 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#RTF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Rosamund_Werter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Rosamund_Werter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Editor"/>
+        <creatoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Servizi_Demografici -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Servizi_Demografici">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#AreaTematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Amministratore"/>
     </owl:NamedIndividual>
     
 
@@ -1697,6 +1875,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Ufficio_Tecnico">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#AreaTematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#17x24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#17x24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#29x24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#29x24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
     </owl:NamedIndividual>
     
 
