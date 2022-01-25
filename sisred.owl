@@ -2144,9 +2144,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PPM_3661798 -->
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3661798 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PPM_3661798">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3661798">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
         <descrizione rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">ppm</descrizione>
         <nome rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Procedure di Polizia Municipale</nome>
@@ -2274,7 +2274,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor_1768">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor"/>
         <hasAreaTematica rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Attività_economiche"/>
-        <hasProdotto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#PPM_3661798"/>
+        <hasProdotto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3661798"/>
         <hasTesto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor_5307787"/>
         <hasTipoProfor rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#ILL_16578"/>
         <redattoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Mario_Rossi"/>
