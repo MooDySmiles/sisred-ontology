@@ -2144,16 +2144,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3661798 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3661798">
-        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
-        <descrizione rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">ppm</descrizione>
-        <nome rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Procedure di Polizia Municipale</nome>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Paolo_Bianchi -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Paolo_Bianchi">
@@ -2239,6 +2229,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3661798 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3661798">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
+        <descrizione rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">ppm</descrizione>
+        <nome rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Procedure di Polizia Municipale</nome>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3844274 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3844274">
@@ -2310,6 +2310,29 @@
         <numero rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">172</numero>
         <numeroFonte rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedByte">313</numeroFonte>
         <titolo rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ulteriori disposizioni urgenti per fronteggiare i rischi sanitari connessi alla diffusione del virus COVID-19</titolo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti_0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML"/>
+        <principale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</principale>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesito_1512652 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesito_1512652">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti"/>
+        <hasProdotto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_88082"/>
+        <hasTesto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesiti_0"/>
+        <data rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-08T23:00:00</data>
+        <descrizione rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Quesito 9/11/2021</descrizione>
+        <oggetto rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">IL CASO – Cittadinanza della donna coniugata con straniero dopo il 1° gennaio 1948</oggetto>
+        <updated rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-09T11:22:55</updated>
     </owl:NamedIndividual>
     
 
