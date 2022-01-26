@@ -2056,6 +2056,7 @@
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_1427 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_1427">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa"/>
         <hasProvvedimento rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento_1416"/>
         <hasTesto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_5648522"/>
@@ -2075,6 +2076,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_5648522">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo"/>
         <principale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</principale>
     </owl:NamedIndividual>
     
@@ -2084,6 +2086,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_5648573">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#HTML"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo"/>
     </owl:NamedIndividual>
     
 
@@ -2415,6 +2418,13 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Org_Prassi"/>
         </owl:members>
     </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_5648522"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_5648573"/>
+        </owl:distinctMembers>
+    </rdf:Description>
     
 
 
@@ -2446,7 +2456,7 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per un dato testo di un documento, se esiste già un testo per quello stesso documento segnato come principale, allora questo non sarà principale</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(Non funziona poiché non c&apos;è nessun Individual di tipo Documento e nessuno di tipo Testo) Per un dato testo di un documento, se esiste già un testo per quello stesso documento segnato come principale, allora questo non sarà principale</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">noTestoPrincipale</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -2554,7 +2564,7 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verifica se un documento ha testi multipli associati</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(Non funziona poiché non c&apos;è nessun Individual di tipo Documento e nessuno di tipo Testo) Verifica se un documento ha testi multipli associati</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testiMultipli</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
