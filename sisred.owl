@@ -2076,6 +2076,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_1427">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa"/>
+        <hasProvvedimento rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento_1416"/>
         <hasTesto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_5648522"/>
         <hasTesto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_5648573"/>
         <redattoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Mario_Rossi"/>
