@@ -2001,6 +2001,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza_1641">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
+        <bibo:cites rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_1427"/>
         <hasCittà rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città_88089"/>
         <hasMassima rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima_234"/>
         <hasMassima rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima_235"/>
