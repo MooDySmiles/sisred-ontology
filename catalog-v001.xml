@@ -2,7 +2,7 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="http://purl.org/ontology/bibo/" uri="bibo.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1643838064526" name="http://purl.org/ontology/bibo/" uri="bibo.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1643838064526" name="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred" uri="sisred.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1643996880550" name="http://purl.org/ontology/bibo/" uri="bibo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1643996880550" name="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred" uri="sisred.owl"/>
     </group>
 </catalog>
