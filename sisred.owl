@@ -2001,6 +2001,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza_1641">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
+        <bibo:cites rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Dottrina_1152"/>
+        <bibo:cites rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa_1427"/>
         <hasCittà rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città_88089"/>
         <hasMassima rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima_234"/>
         <hasMassima rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima_235"/>
@@ -2227,6 +2229,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi_1539">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi"/>
+        <bibo:cites rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor_1768"/>
         <hasOrgano rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Org_Prassi_55"/>
         <hasProdotto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3479336"/>
         <hasProdotto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3919779"/>
@@ -2326,6 +2329,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor_1768">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor"/>
+        <bibo:cites rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesito_1512652"/>
         <hasAreaTematica rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Attività_economiche"/>
         <hasProdotto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3661798"/>
         <hasTesto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor_5307787"/>
