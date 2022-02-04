@@ -2329,6 +2329,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor_1768">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor"/>
+        <bibo:cites rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Dottrina_1152"/>
         <bibo:cites rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Quesito_1512652"/>
         <hasAreaTematica rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Attività_economiche"/>
         <hasProdotto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto_3661798"/>
