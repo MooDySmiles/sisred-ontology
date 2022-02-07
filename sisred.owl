@@ -606,6 +606,14 @@
     
 
 
+    <!-- http://purl.org/ontology/bibo/number -->
+
+    <rdf:Description rdf:about="http://purl.org/ontology/bibo/number">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#numero"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/ontology/bibo/shortDescription -->
 
     <rdf:Description rdf:about="http://purl.org/ontology/bibo/shortDescription">
@@ -1210,6 +1218,7 @@
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Direi che non serve</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1440,6 +1449,7 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Testo"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Massima"/>
     </owl:Class>
     
@@ -1486,13 +1496,17 @@
 
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato">
+        <rdfs:comment>Data property?</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo">
+        <rdfs:comment>Data property?</rdfs:comment>
+    </owl:Class>
     
 
 
