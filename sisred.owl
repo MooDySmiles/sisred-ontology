@@ -654,29 +654,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#bis -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#bis">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Normativa"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#bis"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#cognome -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#cognome">
@@ -1195,7 +1172,6 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Dottrina"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Profor"/>
@@ -1221,6 +1197,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Dottrina"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prassi"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Provvedimento"/>
                 </owl:unionOf>
