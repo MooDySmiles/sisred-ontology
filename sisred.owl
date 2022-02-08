@@ -188,29 +188,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormato -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormato">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isFormatoOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormatoCartaceo -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormatoCartaceo">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isFormatoCartaceoOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasMassima -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasMassima">
@@ -420,24 +397,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isFormatoCartaceoOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isFormatoCartaceoOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isFormatoOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isFormatoOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
     </owl:ObjectProperty>
     
 
@@ -695,21 +654,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#autore -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#autore">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Autori"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#autore"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#bis -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#bis">
@@ -960,7 +904,14 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#firstName">
         <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/firstName"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Autori"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:domain>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#firstName"/>
@@ -968,6 +919,150 @@
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#formato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#formato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#formato"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Cartaceo</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Digitale</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>iLibro</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Cartaceo</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Digitale</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>iLibro</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#formatoCartaceo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#formatoCartaceo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#formatoCartaceo"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>15x21</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>16,7x24</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>17x24</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>19x27</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>21x29,7</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>15x21</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>16,7x24</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>17x24</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>19x27</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>21x29,7</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -998,26 +1093,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#label -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#label">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#label"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#lastName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#lastName">
         <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/lastName"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Autori"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Utente"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:domain>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#lastName"/>
@@ -1080,7 +1167,6 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Autori"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Fonti"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Organi"/>
@@ -1202,23 +1288,6 @@
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#previgenti -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#previgenti">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Prodotto"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#previgenti"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment>Direi che non serve</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1585,13 +1654,6 @@
                 <owl:onProperty rdf:resource="http://purl.org/ontology/bibo/editor"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Editore"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasFormatoCartaceo"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1987,6 +2049,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Fabio_Piccioni">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Autori"/>
+        <firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Fabio</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piccioni</lastName>
     </owl:NamedIndividual>
     
 
@@ -2071,8 +2135,6 @@
         <hasAreaTematica rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Attività_economiche"/>
         <hasAreaTematica rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Polizia"/>
         <hasAutore rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Fabio_Piccioni"/>
-        <hasFormato rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Cartaceo"/>
-        <hasFormatoCartaceo rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#17x24"/>
         <hasTesto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro_PDF_9788891611888"/>
         <redattoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Rosamund_Werter"/>
         <basic:endingPage rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">200</basic:endingPage>
@@ -2084,6 +2146,8 @@
         <descrizione rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span&gt;&lt;span&gt;Con la&amp;nbsp;&lt;strong&gt;Legge 28 aprile 2014, n. 67&lt;/strong&gt;, il Governo ha avviato una profonda riforma del Codice penale e del Codice di procedura penale all&apos;insegna della&amp;nbsp;&lt;span&gt;&lt;strong&gt;depenalizzazione&lt;/strong&gt;&amp;nbsp;&lt;/span&gt;e delle&amp;nbsp;&lt;strong&gt;pene detentive non carcerarie&lt;/strong&gt;, con l&apos;intento di conciliare &amp;ndash;&amp;nbsp;fatto salvo il principio della certezza della pena &amp;ndash;&amp;nbsp;le esigenze della&amp;nbsp;&lt;strong&gt;giustizia&amp;nbsp;&lt;/strong&gt;con quelle dell&apos;&lt;strong&gt;efficacia&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;Il presente volume, ad opera di un riconosciuto esperto del settore, si rivolge con chiarezza e semplicit&amp;agrave; ai Professionisti della giustizia penale, articolandosi in due Parti:&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;&lt;strong&gt;1)&lt;/strong&gt;&amp;nbsp;nella prima, l&apos;Autore compie una ricognizione sistematica della Legge n. 67/2014, con la&amp;nbsp;&lt;strong&gt;riforma della disciplina sanzionatoria&lt;/strong&gt;&amp;nbsp;in essa contenuta e con specifico riguardo alla&amp;nbsp;&lt;strong&gt;&quot;&lt;em&gt;esclusione della punibilit&amp;agrave; per particolare tenuit&amp;agrave; del fatto&lt;/em&gt;&quot;&lt;/strong&gt;;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;strong&gt;2)&lt;/strong&gt;&amp;nbsp;nella seconda &amp;egrave; presente un&apos;analisi ragionata del&amp;nbsp;&lt;strong&gt;D.Lgs. 16 marzo 2015, n. 28&lt;/strong&gt;, dove il Legislatore ha delineato un primo quadro di definizione giuridica della&amp;nbsp;&lt;strong&gt;nuova causa di non punibilit&amp;agrave; prevista nei casi di irrilevanza del fatto&lt;/strong&gt;, applicabile in presenza della particolare tenuit&amp;agrave; del reato e della non abitualit&amp;agrave; del comportamento per le condotte punite con la sola pena pecuniaria o con pene detentive non superiori ai 5 anni.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span&gt;I Professionisti troveranno inoltre di particolare utilit&amp;agrave;:&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;span&gt;&lt;strong&gt;&amp;bull;&lt;/strong&gt;&amp;nbsp;&lt;/span&gt;l&apos;&lt;strong&gt;Appendice&lt;/strong&gt;, suddivisa in 3 sezioni:&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;strong&gt;&amp;ndash;&lt;/strong&gt;&amp;nbsp;un&amp;nbsp;&lt;strong&gt;pratico catalogo dei reati&lt;/strong&gt;&amp;nbsp;del Codice penale e della legislazione speciale coinvolti dalla riforma per &quot;&lt;span&gt;tenuit&amp;agrave; del fatto&lt;/span&gt;&quot;,&amp;nbsp;&lt;strong&gt;facile da consultare e utilizzabile in sede di udienza&lt;/strong&gt;&amp;nbsp;(in particolare segnaliamo i reati stradali, ambientali, edilizi e tributari, oltre alla nuova normativa sulla responsabilit&amp;agrave; penale delle persone giuridiche e sui procedimenti dinnanzi ai Giudici di Pace);&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;strong&gt;&amp;ndash;&lt;/strong&gt;&amp;nbsp;la&amp;nbsp;&lt;strong&gt;giurisprudenza&lt;/strong&gt;&amp;nbsp;della Corte Costituzionale;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;strong&gt;&amp;ndash;&lt;/strong&gt;&amp;nbsp;la prima&amp;nbsp;&lt;strong&gt;prassi&lt;/strong&gt;&amp;nbsp;prodotta sulla materia;&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;strong&gt;&amp;bull;&lt;/strong&gt;&amp;nbsp;il&amp;nbsp;&lt;strong&gt;Cd-Rom&lt;/strong&gt;, con tutta la Normativa di riferimento.&lt;br /&gt;&lt;br /&gt;Muovendosi nell&apos;ottica del Diritto anglosassone secondo cui &lt;strong&gt;&quot;&lt;em&gt;too many rules make less safe&lt;/em&gt;&quot;&lt;/strong&gt;, l&apos;intento dei provvedimenti esaminati nel testo &amp;egrave; quello di sostituire una serie di interventi legislativi simbolici dal forte impatto mediatico, volti a tamponare emergenze sempre diverse, con &lt;strong&gt;un approccio organico e ragionato al Diritto penale&lt;/strong&gt;, ispirato alla&lt;strong&gt; logica della depenalizzazione e dello snellimento dell&apos;azione giudiziaria&lt;/strong&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span&gt;&lt;br /&gt;&lt;span style=&quot;color: #035dac;&quot;&gt;&lt;strong&gt;&lt;em&gt;N.B.&amp;nbsp;&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;color: #035dac;&quot;&gt;&lt;em&gt;L&amp;rsquo;acquisto del volume Cartaceo comprende l&apos;&lt;strong&gt;accesso gratuito&amp;nbsp;&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;span style=&quot;color: #035dac;&quot;&gt;&lt;strong&gt;&lt;em&gt;al corso online&amp;nbsp;&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;color: #ff6600;&quot;&gt;&lt;strong&gt;&lt;a title=&quot;Scheda del videocorso&quot; href=&quot;http://www.maggiolieditore.it/mailing/indici/videocorso_modifiche_codice_penale/corso-online-piccioni-modifiche-codice-penale-2015.pdf&quot; target=&quot;_blank&quot;&gt;&lt;span style=&quot;color: #ff6600;&quot;&gt;&quot;Modifiche 2015 al Codice penale e al Codice di procedura penale&quot;&lt;/span&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;color: #035dac;&quot;&gt;&amp;nbsp;(&lt;em&gt;a cura di Fabio Piccioni&lt;/em&gt;)&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;hr style=&quot;width: 200px;&quot; /&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;&lt;strong&gt;&amp;raquo;&amp;nbsp;&lt;/strong&gt;&lt;span&gt;&lt;em&gt;&lt;strong&gt;Fabio Piccioni&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;Avvocato del Foro di Firenze, patrocinante in Cassazione; giornalista pubblicista; mediatore professionista, accreditato presso il Ministero della Giustizia; docente di Diritto penale alla Scuola di Specializzazione per le Professioni Legali; docente a master universitari; autore di pubblicazioni in materia di diritto penale e amministrativo sanzionatorio.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;br /&gt;&lt;em&gt;Requisiti hardware e software&lt;/em&gt;&lt;br /&gt;&lt;/strong&gt;- Sistema operativo:&amp;nbsp;Windows&amp;reg;&amp;nbsp;98 o successivi&lt;br /&gt;- Browser: Internet&lt;br /&gt;- Programma capace di editare&amp;nbsp;documenti in formato RTF&amp;nbsp;(es. Microsoft Word) e di visualizzare&amp;nbsp;documenti in formato PDF&amp;nbsp;(es. Acrobat Reader).&lt;/p&gt;</descrizione>
         <descrizioneBreve rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&amp;raquo;&amp;nbsp;&lt;/strong&gt;Analisi ragionata del  D.Lgs. 16 marzo 2015, n. 28&lt;br /&gt;&lt;strong&gt;&amp;raquo;&amp;nbsp;&lt;/strong&gt;Depenalizzazione&lt;br /&gt;&lt;strong&gt;&amp;raquo;&amp;nbsp;&lt;/strong&gt;Modifiche al codice penale  e al codice di procedura penale&lt;/p&gt;&lt;h3&gt;&lt;span style=&quot;color: #035dac;&quot;&gt;&lt;b&gt;L&amp;rsquo;acquisto del volume comprende l&apos;accesso gratuito al corso online&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;br /&gt;&lt;/b&gt;&lt;b&gt;&lt;i&gt;&amp;ldquo;Modifiche 2015 al Codice penale &lt;/i&gt;&lt;/b&gt;&lt;b&gt;&lt;i&gt; &lt;/i&gt;&lt;/b&gt;&lt;b&gt;&lt;i&gt;e al Codice di procedura penale&amp;rdquo;&amp;nbsp;&lt;/i&gt;&lt;/b&gt;(a cura di &lt;em&gt;Fabio Piccioni&lt;/em&gt;)&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;&lt;b&gt;&lt;br /&gt;Il Cd-Rom contiene:&amp;nbsp;&lt;/b&gt;&lt;b&gt;Codice penale,&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;Codice&amp;nbsp;&lt;/b&gt;&lt;b&gt;di procedura penale e Normativa di riferimento&lt;/b&gt;&lt;/p&gt;</descrizioneBreve>
         <edizione rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">I</edizione>
+        <formato>Cartaceo</formato>
+        <formatoCartaceo>17x24</formatoCartaceo>
         <image_url rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://bibliotecadigitale.maggioli.it/media/catalog/product/8/8/8891611888.jpg</image_url>
         <mese rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">5</mese>
         <nome rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Tenuità del fatto e non punibilità</nome>
@@ -2114,7 +2178,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Mario_Rossi">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Redattore"/>
         <creatoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed"/>
-        <foaf:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Mario Rossi</foaf:name>
+        <firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Mario</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Rossi</lastName>
     </owl:NamedIndividual>
     
 
@@ -2218,7 +2283,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Paolo_Bianchi">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Redattore"/>
         <creatoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed"/>
-        <foaf:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Paolo Bianchi</foaf:name>
+        <firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Paolo</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bianchi</lastName>
     </owl:NamedIndividual>
     
 
@@ -2414,7 +2480,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Rosamund_Werter">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Redattore"/>
         <creatoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed"/>
-        <foaf:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Rosamund Werter</foaf:name>
+        <firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Rosamund</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Werter</lastName>
     </owl:NamedIndividual>
     
 
@@ -2440,7 +2507,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Amministratore"/>
-        <foaf:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">SisRed Admin</foaf:name>
+        <firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">SisRed</firstName>
     </owl:NamedIndividual>
     
 
