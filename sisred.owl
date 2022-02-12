@@ -188,6 +188,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasImmagineCopertina -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasImmagineCopertina">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isImmagineCopertinaOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/Image"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasMassima -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasMassima">
@@ -402,6 +412,15 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isImmagineCopertinaOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isImmagineCopertinaOf">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
     </owl:ObjectProperty>
     
 
@@ -1650,6 +1669,13 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Editore"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasImmagineCopertina"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/ontology/bibo/Image"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2008,6 +2034,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Copertina_9788891611888 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Copertina_9788891611888">
+        <rdf:type rdf:resource="http://purl.org/ontology/bibo/Image"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Digitale -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Digitale">
@@ -2157,6 +2191,7 @@
         <hasAreaTematica rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Attività_economiche"/>
         <hasAreaTematica rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Polizia"/>
         <hasAutore rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Fabio_Piccioni"/>
+        <hasImmagineCopertina rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Copertina_9788891611888"/>
         <hasTesto rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro_PDF_9788891611888"/>
         <redattoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Rosamund_Werter"/>
         <basic:endingPage rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">200</basic:endingPage>
