@@ -2066,6 +2066,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città_Rif_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città_Rif_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città"/>
+        <nome rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Milano</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città_Rif_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città_Rif_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città"/>
+        <nome rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Roma</nome>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Copertina_9788891611888 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Copertina_9788891611888">
@@ -2374,6 +2392,14 @@
         <creatoDa rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#SisRed"/>
         <firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Paolo</firstName>
         <lastName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bianchi</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Person_Rif_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Person_Rif_1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:NamedIndividual>
     
 
