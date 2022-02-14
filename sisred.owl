@@ -1594,22 +1594,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato">
-        <rdfs:comment>Data property?</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo">
-        <rdfs:comment>Data property?</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Giurisprudenza">
@@ -2049,14 +2033,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Cartaceo -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Cartaceo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città_88089 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Città_88089">
@@ -2088,14 +2064,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Copertina_9788891611888">
         <rdf:type rdf:resource="http://purl.org/ontology/bibo/Image"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Digitale -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Digitale">
-        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Formato"/>
     </owl:NamedIndividual>
     
 
@@ -2639,22 +2607,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Ufficio_Tecnico">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#AreaTematica"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#17x24 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#17x24">
-        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#29x24 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#29x24">
-        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#FormatoCartaceo"/>
     </owl:NamedIndividual>
     
 
