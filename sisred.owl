@@ -56,22 +56,6 @@
     
 
 
-    <!-- http://purl.org/ontology/bibo/citedBy -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/citedBy">
-        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isRimandoOf"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/cites -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/cites">
-        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRimando"/>
-    </rdf:Description>
-    
-
-
     <!-- http://purl.org/ontology/bibo/editor -->
 
     <rdf:Description rdf:about="http://purl.org/ontology/bibo/editor">
@@ -289,6 +273,7 @@
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRimando -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasRimando">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/cites"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isRimandoOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
@@ -506,6 +491,7 @@
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isRimandoOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#isRimandoOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/citedBy"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Documento"/>
     </owl:ObjectProperty>
@@ -1499,14 +1485,6 @@
     
 
 
-    <!-- http://purl.org/ontology/bibo/Book -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Book">
-        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Amministratore -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Amministratore">
@@ -1670,7 +1648,7 @@
     <!-- http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#Libro">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Book"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/andrea/ontologies/2021/11/sisred#hasTesto"/>
